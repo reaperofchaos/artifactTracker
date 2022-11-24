@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="454dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/GrpUnit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnAddUnit"
+                android:layout_width="25dp"
+                android:layout_height="103dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="Add Unit"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/map" />
+
+            <TextView
+                android:id="@+id/lblAddUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Add Site"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/GrpLayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnAddLayer"
+                android:layout_width="25dp"
+                android:layout_height="103dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="Add Layer"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/layers" />
+
+            <TextView
+                android:id="@+id/lblAddLayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Add Layer"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/GrpArtifact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnAddArtifactForm"
+                android:layout_width="25dp"
+                android:layout_height="103dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="Add Artifact"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/arrowhead" />
+
+            <TextView
+                android:id="@+id/lblAddArtifactForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Add Artifact"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:padding="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnAddArtifact"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:contentDescription="Add Artifacts"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/add_artifact" />
+
+        <ImageButton
+            android:id="@+id/btnViewArtifact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:contentDescription="View Artifacts"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/view_artifacts" />
+
+        <ImageButton
+            android:id="@+id/btnGraph"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:contentDescription="Graphs"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/graph" />
+
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:contentDescription="Settings"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/settings" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sync"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
