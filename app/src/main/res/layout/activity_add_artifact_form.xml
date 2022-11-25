@@ -6,6 +6,195 @@
     android:layout_height="match_parent"
     tools:context=".AddArtifactForm">
 
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="377dp"
+        android:layout_height="293dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/grpArtifact"
+            android:layout_width="370dp"
+            android:layout_height="297dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="329dp"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblSiteForm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Site Name:"
+                    android:textAlignment="center" />
+
+                <Spinner
+                    android:id="@+id/selectDBType"
+                    android:layout_width="201dp"
+                    android:layout_height="wrap_content" />
+                <ImageButton
+                    android:id="@+id/btnAddSite"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:contentDescription="Add Site"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/add" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="329dp"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Unit Name:"
+                    android:textAlignment="center" />
+
+                <Spinner
+                    android:id="@+id/selectUnit"
+                    android:layout_width="201dp"
+                    android:layout_height="wrap_content" />
+                <ImageButton
+                    android:id="@+id/btnAddUnit"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:contentDescription="Add Unit"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/add" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="329dp"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblLayer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Layer Name:"
+                    android:textAlignment="center" />
+
+                <Spinner
+                    android:id="@+id/selectLayer"
+                    android:layout_width="201dp"
+                    android:layout_height="wrap_content" />
+                <ImageButton
+                    android:id="@+id/btnAddLayer"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:contentDescription="Add Layer"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/add" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="329dp"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblArtifactType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Artifact Type:"
+                    android:textAlignment="center" />
+
+                <Spinner
+                    android:id="@+id/selectArtifactType"
+                    android:layout_width="201dp"
+                    android:layout_height="wrap_content" />
+                <ImageButton
+                    android:id="@+id/btnAddArtifactType"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:contentDescription="Add Artifact Type"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/add" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtArtifactId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/ArtifactID"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/txtCoordinates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Coordinates" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/txtX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="X-Axis"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/txtY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Y-Axis"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/txtZ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Z-Axis"
+                    android:inputType="numberDecimal" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnSaveArtifact"
+        android:layout_width="176dp"
+        android:layout_height="87dp"
+        android:text="@string/SaveArtifact"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -59,5 +248,16 @@
             app:srcCompat="@drawable/settings" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblArtifactTypeForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AddArtifact"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

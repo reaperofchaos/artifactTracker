@@ -3,17 +3,12 @@ package com.jacobconner.artifacttracker;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
-
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+import android.widget.TextView;
 
 import com.jacobconner.artifacttracker.databinding.ActivityAddSiteFormBinding;
 
@@ -22,9 +17,27 @@ public class AddSiteForm extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_site_form);
+        initToolbar();
+        initSaveButton();
+    }
+
+    private void initSaveButton() {
+        Button saveBtn = findViewById(R.id.btnSaveSite);
+        TextView siteName = findViewById(R.id.txtSiteName);
+        TextView siteId = findViewById(R.id.txtSiteId);
+        TextView latitude = findViewById(R.id.txtX);
+        TextView longitude = findViewById(R.id.txtY);
+
+        saveBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+              //create a site and add to database
+            }
+        });
+    }
+    void initToolbar(){
         initArtifactButton();
-        initViewArtifactButton();
         initGraphButton();
+        initViewArtifactButton();
         initSettingsButton();
     }
 

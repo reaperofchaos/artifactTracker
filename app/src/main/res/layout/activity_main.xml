@@ -40,7 +40,7 @@
                 app:srcCompat="@drawable/map" />
 
             <TextView
-                android:id="@+id/lblAddUnit"
+                android:id="@+id/lblArtifactForm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -98,7 +98,7 @@
                 app:srcCompat="@drawable/arrowhead" />
 
             <TextView
-                android:id="@+id/lblAddArtifactForm"
+                android:id="@+id/lblArtifactTypeForm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -164,7 +164,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSync"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sync"

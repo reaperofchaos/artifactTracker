@@ -14,6 +14,12 @@
         android:theme="@style/Theme.ArtifactTracker"
         tools:targetApi="31">
         <activity
+            android:name=".AddArtifactType"
+            android:exported="false" />
+        <activity
+            android:name=".add_layer_form"
+            android:exported="false" />
+        <activity
             android:name=".graph_view"
             android:exported="false" />
         <activity

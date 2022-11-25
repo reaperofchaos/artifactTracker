@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,15 +14,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initToolbar();
+        initForms();
+        initSyncButton();
+    }
+
+    private void initToolbar(){
         initArtifactButton();
         initViewArtifactButton();
         initGraphButton();
         initSettingsButton();
+    }
+
+    private void initForms(){
         initArtifactFormButton();
         initAddUnitButton();
         initLayerButton();
     }
-
     private void initArtifactFormButton() {
         ImageButton artifactBtn = findViewById(R.id.btnAddArtifactForm);
         artifactBtn.setOnClickListener(new View.OnClickListener() {
@@ -37,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton unitBtn = findViewById(R.id.btnAddUnit);
         unitBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AddUnitForm.class);
+                Intent intent = new Intent(MainActivity.this, AddSiteForm.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
@@ -91,6 +100,17 @@ public class MainActivity extends AppCompatActivity {
     private  void initSettingsButton(){
         ImageButton btnSettings = findViewById(R.id.btnSettings);
         btnSettings.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, settings.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private  void initSyncButton(){
+        Button btnSync = findViewById(R.id.btnSync);
+        btnSync.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, settings.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

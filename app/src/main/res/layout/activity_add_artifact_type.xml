@@ -4,103 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".settings">
-
-    <TextView
-        android:id="@+id/lblConnectionSettings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Connection Settings"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".AddArtifactType">
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="355dp"
-        android:layout_height="239dp"
+        android:layout_width="330dp"
+        android:layout_height="103dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.321">
 
         <LinearLayout
-            android:id="@+id/grpSettings"
+            android:id="@+id/grpArtifactType"
             android:layout_width="370dp"
             android:layout_height="297dp"
             android:gravity="center"
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/txtServerAddress"
+                android:id="@+id/txtArtifactType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="@string/DBServer"
+                android:hint="@string/ArtifactType"
                 android:inputType="textPersonName" />
 
-            <EditText
-                android:id="@+id/txtPort"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/Port"
-                android:inputType="number|textPersonName" />
 
-            <LinearLayout
-                android:layout_width="329dp"
-                android:layout_height="44dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/lblServerType"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Server Type:"
-                    android:textAlignment="center" />
-
-                <Spinner
-                    android:id="@+id/selectDBType"
-                    android:layout_width="201dp"
-                    android:layout_height="wrap_content"
-                    android:entries="@array/serverTypes" />
-
-            </LinearLayout>
-
-            <EditText
-                android:id="@+id/txtUserName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/Username"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/txtPassword"
-                android:layout_width="wrap_content"
-                android:layout_height="58dp"
-                android:ems="10"
-                android:hint="@string/Password"
-                android:inputType="textPersonName|textWebPassword" />
         </LinearLayout>
     </ScrollView>
 
     <Button
-        android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Save"
+        android:id="@+id/btnSaveArtifactType"
+        android:layout_width="245dp"
+        android:layout_height="75dp"
+        android:text="@string/AddArtifactType"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+        app:layout_constraintVertical_bias="0.206" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -154,5 +100,16 @@
             app:srcCompat="@drawable/settings" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblArtifactTypeForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AddArtifactType"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

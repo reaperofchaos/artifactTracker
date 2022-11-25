@@ -23,12 +23,26 @@ public class AddUnitForm extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_unit_form);
-        initArtifactButton();
-        initViewArtifactButton();
-        initGraphButton();
-        initSettingsButton();
+        initToolbar();
+        initAddSiteButton();
     }
 
+    private void initAddSiteButton(){
+        ImageButton addSiteButton = findViewById(R.id.btnAddSite);
+        addSiteButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(AddUnitForm.this, AddSiteForm.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+    }
+    void initToolbar(){
+        initArtifactButton();
+        initGraphButton();
+        initViewArtifactButton();
+        initSettingsButton();
+    }
     private void initArtifactButton() {
         ImageButton artifactBtn = findViewById(R.id.btnAddArtifact);
         artifactBtn.setOnClickListener(new View.OnClickListener() {

@@ -5,12 +5,15 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1405" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_add_site_form.xml" value="0.13728470111448834" />
+        <entry key="app/src/main/res/layout/activity_add_artifact_form.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_add_artifact_type.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_add_layer_form.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_add_site_form.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_add_unit_form.xml" value="0.20111214087117701" />
-        <entry key="app/src/main/res/layout/activity_graph_view.xml" value="0.13728470111448834" />
+        <entry key="app/src/main/res/layout/activity_graph_view.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.375" />
-        <entry key="app/src/main/res/layout/activity_view_artifacts_view.xml" value="0.13728470111448834" />
+        <entry key="app/src/main/res/layout/activity_view_artifacts_view.xml" value="0.25" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
       </map>
     </option>
