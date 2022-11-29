@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -16,6 +18,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.jacobconner.artifacttracker.databinding.ActivityAddUnitFormBinding;
+
+import org.w3c.dom.Text;
 
 public class AddUnitForm extends AppCompatActivity {
 
@@ -29,11 +33,15 @@ public class AddUnitForm extends AppCompatActivity {
 
     private void initAddSiteButton(){
         ImageButton addSiteButton = findViewById(R.id.btnAddSite);
+        TextView unitName = findViewById(R.id.txtUnitName);
+        TextView unitWidth = findViewById(R.id.txtUnitWidth);
+        TextView unitHeight = findViewById(R.id.txtUnitHeight);
+        Spinner heightUnits = findViewById(R.id.selectHeightUnits);
+        Spinner widthUnits = findViewById(R.id.selectWidthUnits);
+
         addSiteButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(AddUnitForm.this, AddSiteForm.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                //build a unit and add to db
             }
         });
     }
