@@ -8,6 +8,22 @@ import androidx.room.PrimaryKey;
 public class ArtifactType {
     @PrimaryKey(autoGenerate = true)
     @NonNull
-    int id;
-    String artifactType;
+    public int id;
+    public String artifactType;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getArtifactType() {
+        return artifactType;
+    }
+
+    public void setArtifactType(String artifactType) {
+        this.artifactType = artifactType;
+    }
 }

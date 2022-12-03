@@ -48,5 +48,5 @@ public interface ArtifactDao {
      * @return a artifact
      */
     @Query("SELECT * FROM artifact_type WHERE id=:id LIMIT 1")
-    LiveData<Artifact> selectArtifactById(int id);
+    LiveData<ArtifactType> selectArtifactById(int id);
 }

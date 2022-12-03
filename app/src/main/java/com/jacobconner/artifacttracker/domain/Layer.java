@@ -8,8 +8,41 @@ import androidx.room.PrimaryKey;
 public class Layer {
     @PrimaryKey(autoGenerate = true)
     @NonNull
-     int id;
-     int siteId;
-     int unitId;
-     String layerName;
+    public int id;
+    public int siteId;
+    public int unitId;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getSiteId() {
+        return siteId;
+    }
+
+    public void setSiteId(int siteId) {
+        this.siteId = siteId;
+    }
+
+    public int getUnitId() {
+        return unitId;
+    }
+
+    public void setUnitId(int unitId) {
+        this.unitId = unitId;
+    }
+
+    public String getLayerName() {
+        return layerName;
+    }
+
+    public void setLayerName(String layerName) {
+        this.layerName = layerName;
+    }
+
+    public String layerName;
 }

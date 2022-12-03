@@ -11,11 +11,68 @@ import androidx.room.PrimaryKey;
 public class Unit {
     @PrimaryKey(autoGenerate = true)
     @NonNull
-     int id;
-     int siteId;
-     String unitName;
-     float unitWidth;
-     float unitHeight;
-     String heightUnits;
-     String widthUnits;
+    public int id;
+    public int siteId;
+    public String unitName;
+    public float unitWidth;
+    public float unitHeight;
+    public String heightUnits;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getSiteId() {
+        return siteId;
+    }
+
+    public void setSiteId(int siteId) {
+        this.siteId = siteId;
+    }
+
+    public String getUnitName() {
+        return unitName;
+    }
+
+    public void setUnitName(String unitName) {
+        this.unitName = unitName;
+    }
+
+    public float getUnitWidth() {
+        return unitWidth;
+    }
+
+    public void setUnitWidth(float unitWidth) {
+        this.unitWidth = unitWidth;
+    }
+
+    public float getUnitHeight() {
+        return unitHeight;
+    }
+
+    public void setUnitHeight(float unitHeight) {
+        this.unitHeight = unitHeight;
+    }
+
+    public String getHeightUnits() {
+        return heightUnits;
+    }
+
+    public void setHeightUnits(String heightUnits) {
+        this.heightUnits = heightUnits;
+    }
+
+    public String getWidthUnits() {
+        return widthUnits;
+    }
+
+    public void setWidthUnits(String widthUnits) {
+        this.widthUnits = widthUnits;
+    }
+
+    public String widthUnits;
 }

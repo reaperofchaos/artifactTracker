@@ -5,10 +5,8 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
-
 import com.jacobconner.artifacttracker.domain.ArtifactType;
 import com.jacobconner.artifacttracker.domain.Setting;
-
 import java.util.List;
 
 @Dao
@@ -28,17 +26,10 @@ public interface SettingDao {
     void deleteSetting(int id);
 
     /**
-     * Selects all Artifact Type
-     * @return a list of artifact_type
+     * Selects setting
+     * @return a single setting
      */
-    @Query("SELECT * FROM artifact_type")
-    LiveData<List<ArtifactType>> selectArtifactTypes();
+    @Query("SELECT * FROM setting LIMIT 1")
+    LiveData<Setting> selectSetting();
 
-    /**
-     * Selects a Artifact Type by name
-     * @param type, artifact type in db
-     * @return a artifact type
-     */
-    @Query("SELECT * FROM artifact_type WHERE artifactType=:type LIMIT 1")
-    LiveData<ArtifactType> selectArtifactByType(String type);
 }

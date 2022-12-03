@@ -8,8 +8,40 @@ import androidx.room.PrimaryKey;
 public class Site {
     @PrimaryKey(autoGenerate = true)
     @NonNull
-     int id;
-     String siteName;
-     float latitude;
-     float longitude;
+     public int id;
+     public String siteName;
+     public float latitude;
+     public float longitude;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getSiteName() {
+        return siteName;
+    }
+
+    public void setSiteName(String siteName) {
+        this.siteName = siteName;
+    }
+
+    public float getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(float latitude) {
+        this.latitude = latitude;
+    }
+
+    public float getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(float longitude) {
+        this.longitude = longitude;
+    }
 }
