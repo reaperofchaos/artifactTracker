@@ -21,7 +21,7 @@ public class ArtifactTypeViewModel  extends AndroidViewModel {
         artifactTypes = artifactTypeRepository.getArtifactTypes();
     }
 
-    LiveData<List<ArtifactType>> getArtifactTypes() { return artifactTypes; }
+    public LiveData<List<ArtifactType>> getArtifactTypes() { return artifactTypes; }
 
     public void insert(ArtifactType artifactType) { artifactTypeRepository.insert(artifactType); }
 }

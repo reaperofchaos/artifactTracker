@@ -37,7 +37,7 @@
                     android:textAlignment="center" />
 
                 <Spinner
-                    android:id="@+id/selectDBType"
+                    android:id="@+id/selectSite"
                     android:layout_width="201dp"
                     android:layout_height="wrap_content" />
                 <ImageButton

@@ -8,8 +8,8 @@
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="360dp"
-        android:layout_height="279dp"
+        android:layout_width="396dp"
+        android:layout_height="183dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,6 +40,7 @@
                     android:id="@+id/selectSiteName"
                     android:layout_width="201dp"
                     android:layout_height="wrap_content" />
+
                 <ImageButton
                     android:id="@+id/btnAddSite"
                     android:layout_width="25dp"
@@ -69,6 +70,7 @@
                     android:id="@+id/selectUnit"
                     android:layout_width="201dp"
                     android:layout_height="wrap_content" />
+
                 <ImageButton
                     android:id="@+id/btnAddUnit"
                     android:layout_width="25dp"
@@ -160,8 +162,10 @@
         android:text="@string/SaveLayer"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+        app:layout_constraintVertical_bias="0.517" />
 
     <TextView
         android:id="@+id/lblLayerForm"

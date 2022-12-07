@@ -1,5 +1,8 @@
 package com.jacobconner.artifacttracker;
 
+import static com.jacobconner.artifacttracker.utils.FormUtils.tryParseFloat;
+import static com.jacobconner.artifacttracker.utils.FormUtils.tryParseInt;
+
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -10,10 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import com.jacobconner.artifacttracker.databinding.ActivityAddSiteFormBinding;
 import com.jacobconner.artifacttracker.domain.Site;
 import com.jacobconner.artifacttracker.viewcontroller.SiteViewModel;
 
@@ -30,21 +30,6 @@ public class AddSiteForm extends AppCompatActivity {
         initSaveButton();
     }
 
-    public static int tryParseInt(String value) {
-        try {
-            return Integer.parseInt(value);
-        } catch (NumberFormatException nfe) {
-            return 0;
-        }
-    }
-
-    public static float tryParseFloat(String value) {
-        try {
-            return Float.parseFloat(value);
-        } catch (NumberFormatException nfe) {
-            return 0.0F;
-        }
-    }
 
     private void initSaveButton() {
         Button saveBtn = findViewById(R.id.btnSaveSite);
@@ -52,8 +37,6 @@ public class AddSiteForm extends AppCompatActivity {
         EditText txtSiteId = findViewById(R.id.txtSiteId);
         EditText txtLatitude = findViewById(R.id.txtLatitude);
         EditText txtLongitude = findViewById(R.id.txtLongitude);
-
-
 
         saveBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {

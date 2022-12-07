@@ -23,7 +23,7 @@ public class UnitViewModel extends AndroidViewModel {
         units = UnitRepository.getUnits();
     }
 
-    LiveData<List<Unit>> getUnits() { return units; }
+    public LiveData<List<Unit>> getUnits() { return units; }
 
     public void insert(Unit unit) { unitRepository.insert(unit); }
 }

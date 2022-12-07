@@ -23,7 +23,7 @@ public class SettingViewModel extends AndroidViewModel {
         setting = settingRepository.getSetting();
     }
 
-    LiveData<Setting> getSetting() { return setting; }
+    public LiveData<Setting> getSetting() { return setting; }
 
     public void insert(Setting setting) { SettingRepository.insert(setting); }
 }

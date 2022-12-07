@@ -23,7 +23,7 @@ public class LayerViewModel extends AndroidViewModel {
         layers = layerRepository.getLayers();
     }
 
-    LiveData<List<Layer>> getLayers() { return layers; }
+    public LiveData<List<Layer>> getLayers() { return layers; }
 
     public void insert(Layer layer) { layerRepository.insert(layer); }
 }

@@ -19,7 +19,7 @@ public class SiteViewModel extends AndroidViewModel {
         sites = siteRepository.getSites();
     }
 
-    LiveData<List<Site>> getSites() { return sites; }
+    public LiveData<List<Site>> getSites() { return sites; }
 
     public void insert(Site site) { siteRepository.insert(site); }
 }
