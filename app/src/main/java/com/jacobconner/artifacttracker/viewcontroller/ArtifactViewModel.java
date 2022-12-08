@@ -19,7 +19,7 @@ public class ArtifactViewModel extends AndroidViewModel {
         artifacts = artifactRepository.getArtifacts();
     }
 
-    LiveData<List<Artifact>> getArtifacts() { return artifacts; }
+    public LiveData<List<Artifact>> getArtifacts() { return artifacts; }
 
     public void insert(Artifact artifact) { artifactRepository.insert(artifact); }
 }

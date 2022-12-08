@@ -10,10 +10,11 @@
         <entry key="app/src/main/res/layout/activity_add_layer_form.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_add_site_form.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_add_unit_form.xml" value="0.20111214087117701" />
-        <entry key="app/src/main/res/layout/activity_graph_view.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_graph_view.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_view_artifacts_view.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/artifact_item.xml" value="0.25" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
       </map>
     </option>

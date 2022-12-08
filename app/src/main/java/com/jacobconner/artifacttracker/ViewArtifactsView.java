@@ -1,18 +1,39 @@
 package com.jacobconner.artifacttracker;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class ViewArtifactsView extends AppCompatActivity {
+import com.jacobconner.artifacttracker.domain.Artifact;
+import com.jacobconner.artifacttracker.viewcontroller.ArtifactViewModel;
 
+import java.util.ArrayList;
+import java.util.List;
+
+public class ViewArtifactsView extends AppCompatActivity {
+    private ArtifactViewModel artifactViewModel;
+    ArtifactAdapter adapter;
+    List<Artifact> artifactList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_artifacts_view);
+        RecyclerView recyclerView = findViewById(R.id.recyclerview);
+        artifactViewModel = new ViewModelProvider(this).get(ArtifactViewModel.class);
+        adapter = new ArtifactAdapter((ArrayList<Artifact>) artifactList, ViewArtifactsView.this);
+
+        artifactViewModel.getArtifacts().observe(this, artifacts -> {
+            artifactList = artifacts;
+        });
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
+
         initArtifactButton();
         initViewArtifactButton();
         initGraphButton();

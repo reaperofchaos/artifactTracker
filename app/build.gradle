@@ -51,6 +51,8 @@ dependencies {
     // UI
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
     implementation "com.google.android.material:material:$rootProject.materialVersion"
+    // Any Chart
+    implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
 
     // Testing
     testImplementation "junit:junit:$rootProject.junitVersion"
