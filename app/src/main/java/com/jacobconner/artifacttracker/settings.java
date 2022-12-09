@@ -3,21 +3,26 @@ package com.jacobconner.artifacttracker;
 import static com.jacobconner.artifacttracker.utils.FormUtils.getIndex;
 import static com.jacobconner.artifacttracker.utils.FormUtils.tryParseInt;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 import com.jacobconner.artifacttracker.domain.Setting;
+import com.jacobconner.artifacttracker.domain.Site;
 import com.jacobconner.artifacttracker.viewcontroller.SettingViewModel;
+
+import java.util.ArrayList;
 
 
 public class settings extends AppCompatActivity {
     private SettingViewModel settingsViewModel;
-    private Setting setting;
+    private ArrayList<Setting> settingList = new ArrayList<>();
     private Button btnSaveButton;
     private EditText txtServerAddress;
     private EditText txtPort;
@@ -30,8 +35,21 @@ public class settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         settingsViewModel = new ViewModelProvider(this).get(SettingViewModel.class);
-        settingsViewModel.getSetting().observe(this, current->this.setting = current);
-        
+        settingsViewModel.getSetting().observe(this, result -> {
+            String connection = result.getServerAddress();
+            txtServerAddress.setText(connection);
+            int portNo = result.getPort();
+            txtPort.setText(Integer.toString(portNo));
+            String username = result.getUserName();
+            txtUserName.setText(username);
+            String password = result.getPassword();
+            txtPassword.setText(password);
+            String DbType = result.getDbType();
+            int found = getIndex(spinDbType, DbType);
+            if (found != -1) {
+                spinDbType.setSelection(found);
+            }
+        });
         initForm();
         initToolbar();
         initSaveButton();
@@ -87,24 +105,24 @@ public class settings extends AppCompatActivity {
     public void onResume() {
         super.onResume();
 
-        if (setting != null) {
+        if (settingList != null && settingList.size() > 0) {
             System.out.println("Setting is not null");
             try {
-                String connection = setting.getServerAddress();
+                String connection = settingList.get(0).getServerAddress();
                 System.out.println("connection " + connection);
                 txtServerAddress.setText(connection);
-                int portNo = setting.getPort();
+                int portNo = settingList.get(0).getPort();
                 System.out.println("port " + portNo);
 
                 txtPort.setText(Integer.toString(portNo));
-                String username = setting.getUserName();
+                String username = settingList.get(0).getUserName();
                 System.out.println("username " + username);
                 txtUserName.setText(username);
-                String password = setting.getPassword();
+                String password = settingList.get(0).getPassword();
                 System.out.println("password " + password);
 
                 txtPassword.setText(password);
-                String DbType = setting.getDbType();
+                String DbType = settingList.get(0).getDbType();
                 System.out.println("DbType " + DbType);
                 int found = getIndex(spinDbType, DbType);
                 if (found != -1) {
